@@ -1,0 +1,67 @@
+{
+  "salon": {
+    "name": "Luxe Nail & Beauty Bar",
+    "tagline": "Where Elegance Meets Self-Care",
+    "phone": "(555) 234-5678",
+    "email": "hello@luxebeautybar.com",
+    "address": "1234 Rose Avenue, Beverly Hills, CA 90210",
+    "hours": {
+      "monday": "9:00 AM – 7:00 PM",
+      "tuesday": "9:00 AM – 7:00 PM",
+      "wednesday": "9:00 AM – 7:00 PM",
+      "thursday": "9:00 AM – 8:00 PM",
+      "friday": "9:00 AM – 8:00 PM",
+      "saturday": "10:00 AM – 6:00 PM",
+      "sunday": "Closed"
+    },
+    "social": {
+      "instagram": "https://instagram.com/luxebeautybar",
+      "facebook": "https://facebook.com/luxebeautybar",
+      "tiktok": "https://tiktok.com/@luxebeautybar"
+    }
+  },
+  "services": [
+    { "id": 1, "category": "Nails", "name": "Classic Manicure", "description": "A timeless manicure with nail shaping, cuticle care, and your choice of polish.", "duration": "30 min", "price": 35, "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400" },
+    { "id": 2, "category": "Nails", "name": "Gel Manicure", "description": "Long-lasting gel polish with a flawless, chip-free finish for up to 3 weeks.", "duration": "45 min", "price": 55, "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=400" },
+    { "id": 3, "category": "Nails", "name": "Luxury Pedicure", "description": "A pampering pedicure with exfoliation, massage, mask, and perfect polish.", "duration": "60 min", "price": 65, "image": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=400" },
+    { "id": 4, "category": "Nails", "name": "Nail Art & Extensions", "description": "Custom nail art designs or acrylic/gel extensions for a bold, unique look.", "duration": "90 min", "price": 85, "image": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400" },
+    { "id": 5, "category": "Lashes", "name": "Classic Lash Extensions", "description": "Natural-looking lash extensions applied one-by-one for subtle fullness.", "duration": "90 min", "price": 120, "image": "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=400" },
+    { "id": 6, "category": "Lashes", "name": "Volume Lash Set", "description": "Dramatic, full lash fans for a glamorous, eye-catching look.", "duration": "120 min", "price": 180, "image": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400" },
+    { "id": 7, "category": "Lashes", "name": "Lash Lift & Tint", "description": "Lift and curl your natural lashes with a semi-permanent tint for definition.", "duration": "60 min", "price": 75, "image": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400" },
+    { "id": 8, "category": "Brows", "name": "Brow Shaping & Wax", "description": "Expertly shaped brows using wax for clean, defined arches.", "duration": "20 min", "price": 25, "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400" },
+    { "id": 9, "category": "Brows", "name": "Brow Lamination", "description": "Smooth and set brow hairs for a fluffy, brushed-up look that lasts weeks.", "duration": "45 min", "price": 65, "image": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400" },
+    { "id": 10, "category": "Skincare", "name": "Hydrating Facial", "description": "Deep hydration treatment with serums, masks, and gentle massage.", "duration": "60 min", "price": 95, "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400" },
+    { "id": 11, "category": "Skincare", "name": "Anti-Aging Facial", "description": "Targeted treatment with retinol, peptides, and collagen-boosting techniques.", "duration": "75 min", "price": 130, "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400" },
+    { "id": 12, "category": "Skincare", "name": "LED Light Therapy", "description": "Non-invasive light therapy for acne, inflammation, or skin rejuvenation.", "duration": "30 min", "price": 60, "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400" }
+  ],
+  "team": [
+    { "id": 1, "name": "Sophia Laurent", "role": "Founder & Lead Nail Artist", "bio": "With over 12 years of experience, Sophia brings artistry and precision to every appointment.", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300" },
+    { "id": 2, "name": "Isabella Chen", "role": "Senior Lash Technician", "bio": "Isabella specializes in creating stunning lash sets that enhance your natural beauty.", "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" },
+    { "id": 3, "name": "Amara Johnson", "role": "Skincare Specialist", "bio": "Amara combines clinical expertise with a gentle touch for radiant, healthy skin.", "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300" },
+    { "id": 4, "name": "Olivia Martinez", "role": "Brow Artist & Stylist", "bio": "Olivia's keen eye for symmetry and shape creates brows that perfectly frame your face.", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" }
+  ],
+  "testimonials": [
+    { "id": 1, "name": "Emily R.", "text": "Absolutely the best nail salon I've ever been to! The attention to detail is incredible and the atmosphere is so relaxing.", "rating": 5 },
+    { "id": 2, "name": "Sarah M.", "text": "My lash extensions looked so natural and beautiful. Isabella is truly talented. I get compliments everywhere I go!", "rating": 5 },
+    { "id": 3, "name": "Jessica L.", "text": "The luxury pedicure was heavenly. I felt so pampered from start to finish. This is my go-to salon now.", "rating": 5 },
+    { "id": 4, "name": "Amanda K.", "text": "Sophia's nail art is phenomenal. She turned my vision into reality and exceeded my expectations!", "rating": 5 },
+    { "id": 5, "name": "Rachel T.", "text": "The hydrating facial left my skin glowing for days. The whole experience was pure luxury.", "rating": 5 }
+  ],
+  "timeSlots": [
+    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
+    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
+    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM",
+    "6:00 PM", "6:30 PM"
+  ],
+  "users": [
+    { "id": 1, "name": "Jane Doe", "email": "jane@example.com", "password": "password123", "phone": "(555) 111-2222" },
+    { "id": 2, "name": "Emily Smith", "email": "emily@example.com", "password": "beauty456", "phone": "(555) 333-4444" }
+  ],
+  "bookingHistory": [
+    { "id": 1, "userId": 1, "service": "Gel Manicure", "date": "2025-12-15", "time": "2:00 PM", "status": "Completed" },
+    { "id": 2, "userId": 1, "service": "Luxury Pedicure", "date": "2026-01-08", "time": "11:00 AM", "status": "Completed" },
+    { "id": 3, "userId": 1, "service": "Hydrating Facial", "date": "2026-02-20", "time": "3:00 PM", "status": "Upcoming" },
+    { "id": 4, "userId": 2, "service": "Classic Lash Extensions", "date": "2026-01-22", "time": "10:00 AM", "status": "Completed" },
+    { "id": 5, "userId": 2, "service": "Brow Lamination", "date": "2026-02-18", "time": "1:00 PM", "status": "Upcoming" }
+  ]
+}
