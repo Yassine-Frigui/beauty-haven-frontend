@@ -25,7 +25,7 @@ const Profile = () => {
   const handleSave = () => {
     updateProfile({ name, phone });
     setEditing(false);
-    toast({ title: "Profile updated! ✨" });
+    toast({ title: "Profile updated ✦" });
   };
 
   const handleLogout = () => {
@@ -34,50 +34,52 @@ const Profile = () => {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       <section className="section-padding bg-background">
         <SectionHeading title="My Profile" />
 
         <div className="max-w-2xl mx-auto space-y-8">
           {/* Profile Info */}
-          <div className="glass-card p-6">
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="font-heading text-lg font-semibold">Personal Information</h3>
-              <Button variant="outline" size="sm" onClick={() => editing ? handleSave() : setEditing(true)}>
+          <div className="deco-card">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="font-heading text-xl font-medium tracking-wide">Personal Information</h3>
+              <Button variant="outline" size="sm" onClick={() => editing ? handleSave() : setEditing(true)} className="rounded-none text-[10px] tracking-[0.2em] uppercase">
                 {editing ? "Save" : "Edit"}
               </Button>
             </div>
-            <div className="space-y-3">
-              <div>
-                <label className="text-xs text-muted-foreground uppercase tracking-wider">Name</label>
-                {editing ? <Input value={name} onChange={e => setName(e.target.value)} /> : <p className="font-medium">{user.name}</p>}
-              </div>
-              <div>
-                <label className="text-xs text-muted-foreground uppercase tracking-wider">Email</label>
-                <p className="font-medium">{user.email}</p>
-              </div>
-              <div>
-                <label className="text-xs text-muted-foreground uppercase tracking-wider">Phone</label>
-                {editing ? <Input value={phone} onChange={e => setPhone(e.target.value)} /> : <p className="font-medium">{user.phone || "Not set"}</p>}
-              </div>
+            <div className="space-y-4">
+              {[
+                { label: "Name", value: user.name, editValue: name, set: setName, editable: true },
+                { label: "Email", value: user.email, editable: false },
+                { label: "Phone", value: user.phone || "Not set", editValue: phone, set: setPhone, editable: true },
+              ].map(field => (
+                <div key={field.label}>
+                  <label className="text-[10px] tracking-[0.3em] uppercase font-body font-semibold text-muted-foreground">{field.label}</label>
+                  {editing && field.editable ? (
+                    <Input value={field.editValue} onChange={e => field.set!(e.target.value)} className="rounded-none mt-1" />
+                  ) : (
+                    <p className="font-medium mt-1">{field.value}</p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Booking History */}
-          <div className="glass-card p-6">
-            <h3 className="font-heading text-lg font-semibold mb-4">Booking History</h3>
+          <div className="deco-card">
+            <h3 className="font-heading text-xl font-medium tracking-wide mb-6">Booking History</h3>
             {bookings.length === 0 ? (
               <p className="text-muted-foreground text-sm">No bookings yet.</p>
             ) : (
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {bookings.map(b => (
                   <div key={b.id} className="flex justify-between items-center py-3 border-b border-border last:border-0">
                     <div>
                       <p className="font-medium text-sm">{b.service}</p>
-                      <p className="text-xs text-muted-foreground">{b.date} at {b.time}</p>
+                      <p className="text-[10px] text-muted-foreground tracking-wider">{b.date} at {b.time}</p>
                     </div>
-                    <span className={`text-xs px-3 py-1 rounded-full font-medium ${
-                      b.status === "Completed" ? "bg-green-100 text-green-700" : "bg-primary/10 text-primary"
+                    <span className={`text-[10px] px-3 py-1 tracking-[0.2em] uppercase font-body font-semibold ${
+                      b.status === "Completed" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"
                     }`}>
                       {b.status}
                     </span>
@@ -87,7 +89,7 @@ const Profile = () => {
             )}
           </div>
 
-          <Button variant="outline" onClick={handleLogout} className="w-full border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground">
+          <Button variant="outline" onClick={handleLogout} className="w-full rounded-none border-destructive text-destructive hover:bg-destructive hover:text-destructive-foreground tracking-[0.15em] uppercase text-xs">
             Sign Out
           </Button>
         </div>

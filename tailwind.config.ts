@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Playfair Display', 'serif'],
-        body: ['Lato', 'sans-serif'],
+        heading: ['Cormorant Garamond', 'serif'],
+        display: ['Poiret One', 'sans-serif'],
+        body: ['Raleway', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,16 +52,26 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-          dark: "hsl(var(--gold-dark))",
+        terracotta: {
+          DEFAULT: "hsl(var(--terracotta))",
+          light: "hsl(var(--terracotta-light))",
+          dark: "hsl(var(--terracotta-dark))",
         },
-        blush: "hsl(var(--blush))",
-        rose: "hsl(var(--rose))",
+        sand: {
+          DEFAULT: "hsl(var(--sand))",
+          light: "hsl(var(--sand-light))",
+        },
+        olive: {
+          DEFAULT: "hsl(var(--olive))",
+          light: "hsl(var(--olive-light))",
+        },
+        "warm-brown": "hsl(var(--warm-brown))",
         cream: "hsl(var(--cream))",
-        charcoal: "hsl(var(--charcoal))",
-        taupe: "hsl(var(--taupe))",
+        espresso: "hsl(var(--espresso))",
+        copper: {
+          DEFAULT: "hsl(var(--copper))",
+          light: "hsl(var(--copper-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

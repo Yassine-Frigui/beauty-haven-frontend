@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Star, Sparkles, Heart, Shield } from "lucide-react";
+import { Star, Sparkles, Heart, Shield, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import heroImage from "@/assets/hero-salon.jpg";
 import data from "@/data/data.json";
@@ -20,7 +20,7 @@ const TypewriterText = ({ text }: { text: string }) => {
         clearInterval(interval);
         setDone(true);
       }
-    }, 60);
+    }, 80);
     return () => clearInterval(interval);
   }, [text]);
 
@@ -33,39 +33,37 @@ const TypewriterText = ({ text }: { text: string }) => {
 
 const ServicePreview = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const featured = data.services.slice(0, 4);
+  const featured = data.services.slice(0, 3);
 
   return (
     <section className="section-padding bg-background">
-      <SectionHeading title="Our Services" subtitle="Indulge in our curated selection of premium beauty treatments" />
-      <div ref={ref} className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <SectionHeading title="Curated Treatments" subtitle="Indulge in artisanal beauty rituals crafted for the discerning" />
+      <div ref={ref} className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {featured.map((service, i) => (
           <div
             key={service.id}
-            className={`glass-card overflow-hidden group hover:shadow-lg transition-all duration-300 ${
-              isVisible ? "animate-fade-up" : "opacity-0"
-            }`}
-            style={{ animationDelay: `${i * 0.1}s` }}
+            className={`group ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+            style={{ animationDelay: `${i * 0.15}s` }}
           >
-            <div className="h-48 overflow-hidden">
-              <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-            <div className="p-5">
-              <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-1">{service.category}</p>
-              <h3 className="font-heading text-lg font-semibold mb-2">{service.name}</h3>
-              <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{service.description}</p>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">{service.duration}</span>
-                <span className="font-semibold text-primary">${service.price}</span>
+            <div className="deco-corner overflow-hidden mb-5">
+              <div className="h-64 overflow-hidden">
+                <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
+            </div>
+            <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-body font-semibold mb-2">{service.category}</p>
+            <h3 className="font-heading text-2xl font-light mb-2">{service.name}</h3>
+            <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{service.description}</p>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-muted-foreground tracking-wide">{service.duration}</span>
+              <span className="font-heading text-lg text-primary">${service.price}</span>
             </div>
           </div>
         ))}
       </div>
-      <div className="text-center mt-10">
+      <div className="text-center mt-14">
         <Link to="/services">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Services
+          <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground tracking-[0.2em] uppercase text-xs px-8 py-5 rounded-none">
+            View All Services <ArrowRight className="w-3.5 h-3.5 ml-2" />
           </Button>
         </Link>
       </div>
@@ -85,22 +83,26 @@ const Testimonials = () => {
   const t = data.testimonials[current];
 
   return (
-    <section className="section-padding bg-secondary/30">
-      <SectionHeading title="What Our Clients Say" />
+    <section className="section-padding bg-secondary/30 deco-sunburst">
+      <SectionHeading title="Voices of Elegance" />
       <div ref={ref} className={`max-w-2xl mx-auto text-center ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
-        <div className="flex justify-center gap-1 mb-4">
+        <div className="flex justify-center gap-1 mb-6">
           {Array.from({ length: t.rating }).map((_, i) => (
-            <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+            <Star key={i} className="w-4 h-4 fill-primary text-primary" />
           ))}
         </div>
-        <p className="text-lg italic text-foreground mb-6 font-heading">"{t.text}"</p>
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider">— {t.name}</p>
-        <div className="flex justify-center gap-2 mt-6">
+        <p className="text-xl md:text-2xl italic text-foreground mb-8 font-heading font-light leading-relaxed">"{t.text}"</p>
+        <div className="flex items-center justify-center gap-3">
+          <div className="w-8 h-px bg-primary/40" />
+          <p className="text-[10px] font-body font-semibold tracking-[0.4em] uppercase text-primary">{t.name}</p>
+          <div className="w-8 h-px bg-primary/40" />
+        </div>
+        <div className="flex justify-center gap-3 mt-8">
           {data.testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`w-2 h-2 rounded-full transition-colors ${i === current ? "bg-primary" : "bg-border"}`}
+              className={`w-2 h-2 rotate-45 transition-colors duration-300 ${i === current ? "bg-primary" : "border border-border"}`}
             />
           ))}
         </div>
@@ -112,27 +114,27 @@ const Testimonials = () => {
 const WhyChooseUs = () => {
   const { ref, isVisible } = useScrollAnimation();
   const items = [
-    { icon: Sparkles, title: "Premium Products", desc: "We use only the finest professional-grade products for every treatment." },
-    { icon: Heart, title: "Personalized Care", desc: "Every appointment is tailored to your unique style and preferences." },
-    { icon: Shield, title: "Hygiene First", desc: "Strict sanitization protocols ensure a safe, clean environment." },
-    { icon: Star, title: "Expert Artists", desc: "Our team of certified professionals brings years of expertise." },
+    { icon: Sparkles, title: "Premium Products", desc: "Only the finest professional-grade products grace our treatments." },
+    { icon: Heart, title: "Personalized Care", desc: "Every appointment tailored to your unique style and preferences." },
+    { icon: Shield, title: "Hygiene First", desc: "Strict sanitization protocols for a pristine environment." },
+    { icon: Star, title: "Expert Artisans", desc: "Certified professionals with years of refined expertise." },
   ];
 
   return (
     <section className="section-padding bg-background">
-      <SectionHeading title="Why Choose Us" subtitle="Experience the Luxe difference with every visit" />
-      <div ref={ref} className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <SectionHeading title="The Luxe Distinction" subtitle="What sets us apart in the art of beauty" />
+      <div ref={ref} className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {items.map((item, i) => (
           <div
             key={item.title}
             className={`text-center ${isVisible ? "animate-fade-up" : "opacity-0"}`}
             style={{ animationDelay: `${i * 0.15}s` }}
           >
-            <div className="w-14 h-14 rounded-full gold-gradient flex items-center justify-center mx-auto mb-4">
-              <item.icon className="w-6 h-6 text-primary-foreground" />
+            <div className="w-16 h-16 mx-auto mb-5 flex items-center justify-center border border-primary/30 rotate-45">
+              <item.icon className="w-6 h-6 text-primary -rotate-45" />
             </div>
-            <h3 className="font-heading text-lg font-semibold mb-2">{item.title}</h3>
-            <p className="text-sm text-muted-foreground">{item.desc}</p>
+            <h3 className="font-heading text-lg font-medium mb-2 tracking-wide">{item.title}</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
@@ -146,23 +148,42 @@ const Index = () => (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={heroImage} alt="Luxe Beauty Bar" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-charcoal/60" />
+        <div className="absolute inset-0 bg-espresso/65" />
+        <div className="absolute inset-0 deco-sunburst opacity-40" />
       </div>
       <div className="relative z-10 text-center px-4 max-w-3xl">
-        <p className="text-primary text-sm uppercase tracking-[0.3em] mb-4 animate-fade-in">Welcome to</p>
-        <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-cream mb-6">
-          <TypewriterText text="Luxe Nail & Beauty Bar" />
+        <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
+          <div className="w-12 h-px bg-cream/30" />
+          <span className="text-cream/60 text-[10px] tracking-[0.6em] uppercase font-body">Est. 2018</span>
+          <div className="w-12 h-px bg-cream/30" />
+        </div>
+        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-cream tracking-[0.15em] mb-6">
+          <TypewriterText text="LUXE" />
         </h1>
-        <p className="text-cream/80 text-lg md:text-xl mb-8 animate-fade-in" style={{ animationDelay: "2s" }}>
-          Where Elegance Meets Self-Care
+        <p className="font-heading text-xl sm:text-2xl md:text-3xl text-cream/80 font-light tracking-wider mb-4 animate-fade-in" style={{ animationDelay: "1.5s" }}>
+          Nail & Beauty Bar
+        </p>
+        <p className="text-cream/50 text-xs tracking-[0.4em] uppercase mb-10 animate-fade-in" style={{ animationDelay: "2s" }}>
+          Where Glamour Meets Artistry
         </p>
         <div className="animate-fade-in" style={{ animationDelay: "2.5s" }}>
           <Link to="/booking">
-            <Button size="lg" className="gold-gradient text-primary-foreground font-semibold tracking-wide hover:opacity-90 transition-opacity px-8 py-6 text-base">
-              Book Now
+            <Button className="deco-gradient text-primary-foreground font-body tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-opacity px-10 py-6 rounded-none">
+              Book Your Experience
             </Button>
           </Link>
         </div>
+      </div>
+
+      {/* Bottom deco border */}
+      <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center py-4">
+        <div className="flex-1 h-px bg-cream/10" />
+        <div className="mx-6 flex gap-2">
+          <div className="w-1.5 h-1.5 rotate-45 bg-primary/50" />
+          <div className="w-1.5 h-1.5 rotate-45 bg-primary/30" />
+          <div className="w-1.5 h-1.5 rotate-45 bg-primary/50" />
+        </div>
+        <div className="flex-1 h-px bg-cream/10" />
       </div>
     </section>
 

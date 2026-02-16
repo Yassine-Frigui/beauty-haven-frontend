@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (login(email, password)) {
-      toast({ title: "Welcome back! ✨" });
+      toast({ title: "Welcome back ✦" });
       navigate("/profile");
     } else {
       toast({ title: "Invalid credentials", description: "Please check your email and password.", variant: "destructive" });
@@ -23,25 +23,31 @@ const Login = () => {
   };
 
   return (
-    <div className="pt-20 min-h-screen flex items-center justify-center px-4">
-      <div className="w-full max-w-md glass-card p-8">
-        <h1 className="font-heading text-3xl font-bold text-center mb-2">Welcome Back</h1>
-        <p className="text-center text-muted-foreground text-sm mb-8">Sign in to your account</p>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="pt-24 min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-md deco-card">
+        <div className="text-center mb-8">
+          <p className="font-display text-3xl tracking-[0.2em] mb-1">LUXE</p>
+          <p className="text-[9px] tracking-[0.5em] uppercase text-primary font-body">Beauty Bar</p>
+        </div>
+        <h1 className="font-heading text-3xl font-light text-center mb-2 tracking-wide">Welcome Back</h1>
+        <p className="text-center text-muted-foreground text-xs tracking-wider mb-8">Sign in to your account</p>
+        <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="text-sm font-medium mb-1 block">Email</label>
-            <Input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="jane@example.com" required />
+            <label className="text-[10px] tracking-[0.3em] uppercase font-body font-semibold mb-2 block text-muted-foreground">Email</label>
+            <Input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="jane@example.com" required className="rounded-none" />
           </div>
           <div>
-            <label className="text-sm font-medium mb-1 block">Password</label>
-            <Input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="••••••••" required />
+            <label className="text-[10px] tracking-[0.3em] uppercase font-body font-semibold mb-2 block text-muted-foreground">Password</label>
+            <Input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="••••••••" required className="rounded-none" />
           </div>
-          <Button type="submit" className="w-full gold-gradient text-primary-foreground hover:opacity-90">Sign In</Button>
+          <Button type="submit" className="w-full deco-gradient text-primary-foreground hover:opacity-90 rounded-none tracking-[0.2em] uppercase text-xs py-5">
+            Sign In
+          </Button>
         </form>
-        <p className="text-center text-sm text-muted-foreground mt-6">
+        <p className="text-center text-xs text-muted-foreground mt-6 tracking-wide">
           Don't have an account? <Link to="/signup" className="text-primary hover:underline">Sign up</Link>
         </p>
-        <p className="text-center text-xs text-muted-foreground mt-4">
+        <p className="text-center text-[10px] text-muted-foreground mt-4 tracking-wider">
           Demo: jane@example.com / password123
         </p>
       </div>

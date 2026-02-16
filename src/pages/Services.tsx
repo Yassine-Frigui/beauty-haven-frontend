@@ -11,20 +11,20 @@ const Services = () => {
   const filtered = active === "All" ? data.services : data.services.filter(s => s.category === active);
 
   return (
-    <div className="pt-20">
+    <div className="pt-24">
       <section className="section-padding bg-background">
-        <SectionHeading title="Our Services" subtitle="Explore our full range of premium beauty treatments" />
+        <SectionHeading title="The Menu" subtitle="Our complete collection of artisanal beauty treatments" />
 
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-14">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-medium tracking-wide transition-all duration-200 ${
+              className={`px-6 py-2.5 text-[10px] font-body font-semibold tracking-[0.3em] uppercase transition-all duration-300 rounded-none ${
                 active === cat
-                  ? "gold-gradient text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:text-foreground"
+                  ? "deco-gradient text-primary-foreground"
+                  : "border border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
               }`}
             >
               {cat}
@@ -33,26 +33,24 @@ const Services = () => {
         </div>
 
         {/* Grid */}
-        <div ref={ref} className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={ref} className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filtered.map((service, i) => (
             <div
               key={service.id}
-              className={`glass-card overflow-hidden group hover:shadow-lg transition-all duration-300 ${
-                isVisible ? "animate-fade-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${i * 0.05}s` }}
+              className={`group ${isVisible ? "animate-fade-up" : "opacity-0"}`}
+              style={{ animationDelay: `${i * 0.06}s` }}
             >
-              <div className="h-48 overflow-hidden">
-                <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="p-5">
-                <p className="text-xs uppercase tracking-wider text-primary font-semibold mb-1">{service.category}</p>
-                <h3 className="font-heading text-xl font-semibold mb-2">{service.name}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
-                <div className="flex justify-between items-center border-t border-border pt-3">
-                  <span className="text-sm text-muted-foreground">{service.duration}</span>
-                  <span className="text-lg font-heading font-bold text-primary">${service.price}</span>
+              <div className="deco-corner overflow-hidden mb-4">
+                <div className="h-52 overflow-hidden">
+                  <img src={service.image} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
+              </div>
+              <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-body font-semibold mb-1">{service.category}</p>
+              <h3 className="font-heading text-xl font-medium mb-2">{service.name}</h3>
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{service.description}</p>
+              <div className="flex justify-between items-center border-t border-border pt-3">
+                <span className="text-xs text-muted-foreground tracking-wider">{service.duration}</span>
+                <span className="font-heading text-xl text-primary font-medium">${service.price}</span>
               </div>
             </div>
           ))}
