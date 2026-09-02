@@ -26,8 +26,8 @@ const Login = () => {
     <div className="pt-24 min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md deco-card">
         <div className="text-center mb-8">
-          <p className="font-display text-3xl tracking-[0.2em] mb-1">LUXE</p>
-          <p className="text-[9px] tracking-[0.5em] uppercase text-primary font-body">Beauty Bar</p>
+          <p className="font-display text-3xl tracking-[0.2em] mb-1">ZENSHE</p>
+          <p className="text-[9px] tracking-[0.5em] uppercase text-primary font-body">Spa · Tunisia</p>
         </div>
         <h1 className="font-heading text-3xl font-light text-center mb-2 tracking-wide">Welcome Back</h1>
         <p className="text-center text-muted-foreground text-xs tracking-wider mb-8">Sign in to your account</p>

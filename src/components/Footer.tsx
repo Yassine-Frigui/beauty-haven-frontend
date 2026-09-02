@@ -21,8 +21,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <h3 className="font-display text-2xl tracking-[0.2em] mb-2">{salon.name.toUpperCase().split(' ').slice(0,1)}</h3>
-            <p className="text-cream/50 text-xs tracking-[0.3em] uppercase mb-4">Beauty Bar</p>
+            <h3 className="font-display text-2xl tracking-[0.2em] mb-2">ZENSHE</h3>
+            <p className="text-cream/50 text-xs tracking-[0.3em] uppercase mb-4">Spa · Tunisia</p>
             <p className="text-cream/60 text-sm leading-relaxed">{salon.tagline}</p>
           </div>
 

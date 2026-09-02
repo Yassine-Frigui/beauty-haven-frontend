@@ -1,67 +1,96 @@
 {
   "salon": {
-    "name": "Luxe Nail & Beauty Bar",
-    "tagline": "Where Elegance Meets Self-Care",
-    "phone": "(555) 234-5678",
-    "email": "hello@luxebeautybar.com",
-    "address": "1234 Rose Avenue, Beverly Hills, CA 90210",
+    "name": "ZenShe Spa",
+    "tagline": "Feminine Wellness, Rooted in Nature",
+    "phone": "+216 71 234 567",
+    "email": "hello@zenshespa.tn",
+    "address": "14 Rue des Oliviers, Les Berges du Lac, Tunis 1053, Tunisia",
     "hours": {
-      "monday": "9:00 AM – 7:00 PM",
-      "tuesday": "9:00 AM – 7:00 PM",
-      "wednesday": "9:00 AM – 7:00 PM",
-      "thursday": "9:00 AM – 8:00 PM",
-      "friday": "9:00 AM – 8:00 PM",
-      "saturday": "10:00 AM – 6:00 PM",
+      "monday": "9:00 – 19:00",
+      "tuesday": "9:00 – 19:00",
+      "wednesday": "9:00 – 19:00",
+      "thursday": "9:00 – 20:00",
+      "friday": "9:00 – 20:00",
+      "saturday": "10:00 – 18:00",
       "sunday": "Closed"
     },
     "social": {
-      "instagram": "https://instagram.com/luxebeautybar",
-      "facebook": "https://facebook.com/luxebeautybar",
-      "tiktok": "https://tiktok.com/@luxebeautybar"
+      "instagram": "https://instagram.com/zenshespa",
+      "facebook": "https://facebook.com/zenshespa",
+      "tiktok": "https://tiktok.com/@zenshespa"
     }
   },
   "services": [
-    { "id": 1, "category": "Nails", "name": "Classic Manicure", "description": "A timeless manicure with nail shaping, cuticle care, and your choice of polish.", "duration": "30 min", "price": 35, "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400" },
-    { "id": 2, "category": "Nails", "name": "Gel Manicure", "description": "Long-lasting gel polish with a flawless, chip-free finish for up to 3 weeks.", "duration": "45 min", "price": 55, "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=400" },
-    { "id": 3, "category": "Nails", "name": "Luxury Pedicure", "description": "A pampering pedicure with exfoliation, massage, mask, and perfect polish.", "duration": "60 min", "price": 65, "image": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=400" },
-    { "id": 4, "category": "Nails", "name": "Nail Art & Extensions", "description": "Custom nail art designs or acrylic/gel extensions for a bold, unique look.", "duration": "90 min", "price": 85, "image": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=400" },
-    { "id": 5, "category": "Lashes", "name": "Classic Lash Extensions", "description": "Natural-looking lash extensions applied one-by-one for subtle fullness.", "duration": "90 min", "price": 120, "image": "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=400" },
-    { "id": 6, "category": "Lashes", "name": "Volume Lash Set", "description": "Dramatic, full lash fans for a glamorous, eye-catching look.", "duration": "120 min", "price": 180, "image": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400" },
-    { "id": 7, "category": "Lashes", "name": "Lash Lift & Tint", "description": "Lift and curl your natural lashes with a semi-permanent tint for definition.", "duration": "60 min", "price": 75, "image": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400" },
-    { "id": 8, "category": "Brows", "name": "Brow Shaping & Wax", "description": "Expertly shaped brows using wax for clean, defined arches.", "duration": "20 min", "price": 25, "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400" },
-    { "id": 9, "category": "Brows", "name": "Brow Lamination", "description": "Smooth and set brow hairs for a fluffy, brushed-up look that lasts weeks.", "duration": "45 min", "price": 65, "image": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=400" },
-    { "id": 10, "category": "Skincare", "name": "Hydrating Facial", "description": "Deep hydration treatment with serums, masks, and gentle massage.", "duration": "60 min", "price": 95, "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400" },
-    { "id": 11, "category": "Skincare", "name": "Anti-Aging Facial", "description": "Targeted treatment with retinol, peptides, and collagen-boosting techniques.", "duration": "75 min", "price": 130, "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400" },
-    { "id": 12, "category": "Skincare", "name": "LED Light Therapy", "description": "Non-invasive light therapy for acne, inflammation, or skin rejuvenation.", "duration": "30 min", "price": 60, "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400" }
+    { "id": 1, "category": "Yoni Steaming", "name": "Classic Yoni Steam", "description": "A gentle 30-minute herbal vaginal steam with mugwort, rosemary and chamomile to soothe and restore.", "duration": "30 min", "price": 90, "image": "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400" },
+    { "id": 2, "category": "Yoni Steaming", "name": "Signature ZenShe Steam Ritual", "description": "Our full ritual: foot soak, herbal tea, 45-minute vaginal steam and a guided breathing session.", "duration": "75 min", "price": 160, "image": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=400" },
+    { "id": 3, "category": "Yoni Steaming", "name": "Postpartum Steam Care", "description": "A soft, midwife-informed steam blend to support recovery and comfort after birth.", "duration": "45 min", "price": 130, "image": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400" },
+    { "id": 4, "category": "Yoni Steaming", "name": "Cycle Balance Steam", "description": "Herbal steam timed with your cycle to ease cramps, tension and heaviness.", "duration": "40 min", "price": 110, "image": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=400" },
+    { "id": 5, "category": "Hammam & Body", "name": "Traditional Tunisian Hammam", "description": "Black soap cleanse, kessa exfoliation and rhassoul clay wrap in our marble steam room.", "duration": "75 min", "price": 140, "image": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=400" },
+    { "id": 6, "category": "Hammam & Body", "name": "Olive & Rosemary Body Ritual", "description": "Full-body scrub and massage with Tunisian olive oil and wild rosemary.", "duration": "60 min", "price": 120, "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400" },
+    { "id": 7, "category": "Hammam & Body", "name": "Rhassoul Clay Detox Wrap", "description": "Mineral-rich Atlas clay wrap to purify, soften and re-mineralise the skin.", "duration": "50 min", "price": 105, "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400" },
+    { "id": 8, "category": "Womb Wellness", "name": "Abdominal Womb Massage", "description": "Gentle castor-oil abdominal massage to release tension and support circulation.", "duration": "50 min", "price": 125, "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400" },
+    { "id": 9, "category": "Womb Wellness", "name": "Fertility Support Session", "description": "A combined steam, massage and herbal consultation designed around your goals.", "duration": "90 min", "price": 190, "image": "https://images.unsplash.com/photo-1591343395902-1adcb454c4e2?w=400" },
+    { "id": 10, "category": "Womb Wellness", "name": "Menopause Comfort Ritual", "description": "Cooling herbal steam and grounding massage for hormonal transition support.", "duration": "70 min", "price": 165, "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400" },
+    { "id": 11, "category": "Holistic Care", "name": "Herbal Wellness Consultation", "description": "One-to-one session with our herbalist to build your personal feminine care plan.", "duration": "45 min", "price": 80, "image": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400" },
+    { "id": 12, "category": "Holistic Care", "name": "Sound & Breath Restoration", "description": "Guided breathwork with singing bowls in our garden pavilion.", "duration": "60 min", "price": 95, "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" }
+  ],
+  "memberships": [
+    {
+      "id": 1,
+      "name": "Bloom",
+      "price": 180,
+      "period": "per month",
+      "description": "For those beginning their feminine wellness ritual.",
+      "features": ["1 Classic Yoni Steam monthly", "10% off all other services", "Herbal tea bar access", "Free birthday steam"],
+      "featured": false
+    },
+    {
+      "id": 2,
+      "name": "Rooted",
+      "price": 320,
+      "period": "per month",
+      "description": "Our most-loved plan for consistent monthly care.",
+      "features": ["2 steam rituals monthly", "1 hammam or body ritual", "15% off all add-ons", "Priority booking", "Seasonal herb blend gift"],
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Sanctuary",
+      "price": 550,
+      "period": "per month",
+      "description": "Unlimited care with a dedicated wellness guide.",
+      "features": ["Unlimited yoni steams", "2 womb wellness sessions", "Quarterly herbalist consultation", "20% off retail products", "Private suite access"],
+      "featured": false
+    }
   ],
   "team": [
-    { "id": 1, "name": "Sophia Laurent", "role": "Founder & Lead Nail Artist", "bio": "With over 12 years of experience, Sophia brings artistry and precision to every appointment.", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300" },
-    { "id": 2, "name": "Isabella Chen", "role": "Senior Lash Technician", "bio": "Isabella specializes in creating stunning lash sets that enhance your natural beauty.", "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" },
-    { "id": 3, "name": "Amara Johnson", "role": "Skincare Specialist", "bio": "Amara combines clinical expertise with a gentle touch for radiant, healthy skin.", "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300" },
-    { "id": 4, "name": "Olivia Martinez", "role": "Brow Artist & Stylist", "bio": "Olivia's keen eye for symmetry and shape creates brows that perfectly frame your face.", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" }
+    { "id": 1, "name": "Amira Ben Salah", "role": "Founder & Womb Care Practitioner", "bio": "Amira trained in herbal steam therapy across Morocco and Tunisia, blending tradition with modern care.", "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300" },
+    { "id": 2, "name": "Leïla Trabelsi", "role": "Master Hammam Therapist", "bio": "Twenty years of hammam craft, from kessa exfoliation to rhassoul clay rituals.", "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" },
+    { "id": 3, "name": "Nour Gharbi", "role": "Clinical Herbalist", "bio": "Nour formulates every ZenShe herb blend using organic Tunisian botanicals.", "image": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=300" },
+    { "id": 4, "name": "Sonia Mabrouk", "role": "Breathwork & Postpartum Guide", "bio": "Sonia supports mothers through postpartum recovery with breath, touch and warmth.", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" }
   ],
   "testimonials": [
-    { "id": 1, "name": "Emily R.", "text": "Absolutely the best nail salon I've ever been to! The attention to detail is incredible and the atmosphere is so relaxing.", "rating": 5 },
-    { "id": 2, "name": "Sarah M.", "text": "My lash extensions looked so natural and beautiful. Isabella is truly talented. I get compliments everywhere I go!", "rating": 5 },
-    { "id": 3, "name": "Jessica L.", "text": "The luxury pedicure was heavenly. I felt so pampered from start to finish. This is my go-to salon now.", "rating": 5 },
-    { "id": 4, "name": "Amanda K.", "text": "Sophia's nail art is phenomenal. She turned my vision into reality and exceeded my expectations!", "rating": 5 },
-    { "id": 5, "name": "Rachel T.", "text": "The hydrating facial left my skin glowing for days. The whole experience was pure luxury.", "rating": 5 }
+    { "id": 1, "name": "Ines B.", "text": "The signature steam ritual changed my monthly cycle experience completely. I leave lighter every time.", "rating": 5 },
+    { "id": 2, "name": "Rym K.", "text": "The most peaceful place in Tunis. The hammam here feels like coming home to my grandmother's house, but elevated.", "rating": 5 },
+    { "id": 3, "name": "Farah M.", "text": "Postpartum steam care was exactly the support I needed. Sonia was so gentle and knowledgeable.", "rating": 5 },
+    { "id": 4, "name": "Dorra S.", "text": "I joined the Rooted membership and it is easily the best thing I do for myself each month.", "rating": 5 },
+    { "id": 5, "name": "Yasmine H.", "text": "Nour's herbal consultation gave me clarity no doctor had offered. Truly holistic care.", "rating": 5 }
   ],
   "timeSlots": [
-    "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-    "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM",
-    "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM",
-    "6:00 PM", "6:30 PM"
+    "9:00", "9:30", "10:00", "10:30", "11:00", "11:30",
+    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+    "18:00", "18:30"
   ],
   "users": [
-    { "id": 1, "name": "Jane Doe", "email": "jane@example.com", "password": "password123", "phone": "(555) 111-2222" },
-    { "id": 2, "name": "Emily Smith", "email": "emily@example.com", "password": "beauty456", "phone": "(555) 333-4444" }
+    { "id": 1, "name": "Jane Doe", "email": "jane@example.com", "password": "password123", "phone": "+216 20 111 222" },
+    { "id": 2, "name": "Emily Smith", "email": "emily@example.com", "password": "beauty456", "phone": "+216 20 333 444" }
   ],
   "bookingHistory": [
-    { "id": 1, "userId": 1, "service": "Gel Manicure", "date": "2025-12-15", "time": "2:00 PM", "status": "Completed" },
-    { "id": 2, "userId": 1, "service": "Luxury Pedicure", "date": "2026-01-08", "time": "11:00 AM", "status": "Completed" },
-    { "id": 3, "userId": 1, "service": "Hydrating Facial", "date": "2026-02-20", "time": "3:00 PM", "status": "Upcoming" },
-    { "id": 4, "userId": 2, "service": "Classic Lash Extensions", "date": "2026-01-22", "time": "10:00 AM", "status": "Completed" },
-    { "id": 5, "userId": 2, "service": "Brow Lamination", "date": "2026-02-18", "time": "1:00 PM", "status": "Upcoming" }
+    { "id": 1, "userId": 1, "service": "Classic Yoni Steam", "date": "2026-06-15", "time": "14:00", "status": "Completed" },
+    { "id": 2, "userId": 1, "service": "Traditional Tunisian Hammam", "date": "2026-07-08", "time": "11:00", "status": "Completed" },
+    { "id": 3, "userId": 1, "service": "Signature ZenShe Steam Ritual", "date": "2026-09-20", "time": "15:00", "status": "Upcoming" },
+    { "id": 4, "userId": 2, "service": "Abdominal Womb Massage", "date": "2026-08-22", "time": "10:00", "status": "Completed" },
+    { "id": 5, "userId": 2, "service": "Cycle Balance Steam", "date": "2026-09-18", "time": "13:00", "status": "Upcoming" }
   ]
 }

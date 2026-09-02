@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Star, Sparkles, Heart, Shield, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/hero-salon.jpg";
+import heroImage from "@/assets/hero-spa.jpg";
 import data from "@/data/data.json";
 import SectionHeading from "@/components/SectionHeading";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -37,7 +37,7 @@ const ServicePreview = () => {
 
   return (
     <section className="section-padding bg-background">
-      <SectionHeading title="Curated Treatments" subtitle="Indulge in artisanal beauty rituals crafted for the discerning" />
+      <SectionHeading title="Signature Rituals" subtitle="Herbal steam and womb care ceremonies crafted for every season of womanhood" />
       <div ref={ref} className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {featured.map((service, i) => (
           <div
@@ -55,7 +55,7 @@ const ServicePreview = () => {
             <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{service.description}</p>
             <div className="flex justify-between items-center text-sm">
               <span className="text-muted-foreground tracking-wide">{service.duration}</span>
-              <span className="font-heading text-lg text-primary">${service.price}</span>
+              <span className="font-heading text-lg text-primary">{service.price} TND</span>
             </div>
           </div>
         ))}
@@ -63,7 +63,7 @@ const ServicePreview = () => {
       <div className="text-center mt-14">
         <Link to="/services">
           <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground tracking-[0.2em] uppercase text-xs px-8 py-5 rounded-none">
-            View All Services <ArrowRight className="w-3.5 h-3.5 ml-2" />
+            Explore All Rituals <ArrowRight className="w-3.5 h-3.5 ml-2" />
           </Button>
         </Link>
       </div>
@@ -84,7 +84,7 @@ const Testimonials = () => {
 
   return (
     <section className="section-padding bg-secondary/30 deco-sunburst">
-      <SectionHeading title="Voices of Elegance" />
+      <SectionHeading title="Words From Our Women" />
       <div ref={ref} className={`max-w-2xl mx-auto text-center ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
         <div className="flex justify-center gap-1 mb-6">
           {Array.from({ length: t.rating }).map((_, i) => (
@@ -114,15 +114,15 @@ const Testimonials = () => {
 const WhyChooseUs = () => {
   const { ref, isVisible } = useScrollAnimation();
   const items = [
-    { icon: Sparkles, title: "Premium Products", desc: "Only the finest professional-grade products grace our treatments." },
-    { icon: Heart, title: "Personalized Care", desc: "Every appointment tailored to your unique style and preferences." },
-    { icon: Shield, title: "Hygiene First", desc: "Strict sanitization protocols for a pristine environment." },
-    { icon: Star, title: "Expert Artisans", desc: "Certified professionals with years of refined expertise." },
+    { icon: Sparkles, title: "Organic Herbs", desc: "Every blend is grown and hand-picked in Tunisia, free of synthetics." },
+    { icon: Heart, title: "Personalised Care", desc: "Each ritual is adapted to your cycle, your body and your season of life." },
+    { icon: Shield, title: "Safe & Private", desc: "Single-use liners, sterilised seats and fully private treatment suites." },
+    { icon: Star, title: "Trained Practitioners", desc: "Certified womb care specialists and clinical herbalists." },
   ];
 
   return (
     <section className="section-padding bg-background">
-      <SectionHeading title="The Luxe Distinction" subtitle="What sets us apart in the art of beauty" />
+      <SectionHeading title="The ZenShe Difference" subtitle="Why women across Tunis trust us with their wellness" />
       <div ref={ref} className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {items.map((item, i) => (
           <div
@@ -147,29 +147,29 @@ const Index = () => (
     {/* Hero */}
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Luxe Beauty Bar" className="w-full h-full object-cover" />
+        <img src={heroImage} alt="ZenShe Spa steam ritual room in Tunis" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-espresso/65" />
         <div className="absolute inset-0 deco-sunburst opacity-40" />
       </div>
       <div className="relative z-10 text-center px-4 max-w-3xl">
         <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
           <div className="w-12 h-px bg-cream/30" />
-          <span className="text-cream/60 text-[10px] tracking-[0.6em] uppercase font-body">Est. 2018</span>
+          <span className="text-cream/60 text-[10px] tracking-[0.6em] uppercase font-body">Tunis · Since 2019</span>
           <div className="w-12 h-px bg-cream/30" />
         </div>
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-cream tracking-[0.15em] mb-6">
-          <TypewriterText text="LUXE" />
+          <TypewriterText text="ZENSHE" />
         </h1>
         <p className="font-heading text-xl sm:text-2xl md:text-3xl text-cream/80 font-light tracking-wider mb-4 animate-fade-in" style={{ animationDelay: "1.5s" }}>
-          Nail & Beauty Bar
+          Spa · Tunisia
         </p>
         <p className="text-cream/50 text-xs tracking-[0.4em] uppercase mb-10 animate-fade-in" style={{ animationDelay: "2s" }}>
-          Where Glamour Meets Artistry
+          Feminine Wellness, Rooted in Nature
         </p>
         <div className="animate-fade-in" style={{ animationDelay: "2.5s" }}>
           <Link to="/booking">
             <Button className="deco-gradient text-primary-foreground font-body tracking-[0.3em] uppercase text-xs hover:opacity-90 transition-opacity px-10 py-6 rounded-none">
-              Book Your Experience
+              Book Your Ritual
             </Button>
           </Link>
         </div>

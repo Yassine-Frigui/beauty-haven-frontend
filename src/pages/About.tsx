@@ -16,23 +16,23 @@ const About = () => {
               <div className="deco-corner">
                 <img
                   src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=500"
-                  alt="Salon interior"
+                  alt="ZenShe Spa treatment room"
                   className="w-full aspect-[3/4] object-cover"
                 />
               </div>
             </div>
             <div className="md:col-span-3">
               <p className="text-[10px] tracking-[0.5em] uppercase text-primary font-body font-semibold mb-4">Our Story</p>
-              <h2 className="font-heading text-4xl md:text-5xl font-light mb-8 leading-tight">A Legacy of<br />Refined Beauty</h2>
+              <h2 className="font-heading text-4xl md:text-5xl font-light mb-8 leading-tight">Rooted in<br />Tunisian Tradition</h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2018, Luxe Nail & Beauty Bar was born from a simple belief: every person deserves to feel pampered, beautiful, and confident. What started as a small studio has blossomed into Beverly Hills' most beloved beauty destination.
+                  Founded in 2019 in Tunis, ZenShe Spa was born from a simple belief: feminine wellness deserves warmth, privacy and respect. What began as a single steam room in Les Berges du Lac has grown into Tunisia's most trusted sanctuary for women's intimate care.
                 </p>
                 <p>
-                  Our founder, Sophia Laurent, envisioned a space where artistry meets relaxation — a sanctuary where clients can escape the everyday and emerge feeling their absolute best.
+                  Our founder, Amira Ben Salah, envisioned a place where the ancestral practice of herbal yoni steaming could meet the calm of a modern spa — grounded in Tunisian hammam tradition, guided by trained practitioners.
                 </p>
                 <p>
-                  Today, our team of expert artists continues that vision, combining cutting-edge techniques with the warmth and care that makes every visit feel like coming home.
+                  Today, our team of herbalists and womb care specialists continues that vision, honouring each woman's cycle, body and story with treatments made from Tunisian botanicals.
                 </p>
               </div>
             </div>
@@ -45,9 +45,9 @@ const About = () => {
         <SectionHeading title="Our Philosophy" />
         <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
           {[
-            { title: "Artistry", desc: "Every service is performed with meticulous attention to detail and creative flair." },
-            { title: "Wellness", desc: "We believe beauty treatments should nourish both body and soul." },
-            { title: "Sustainability", desc: "We're committed to eco-friendly products and responsible practices." },
+            { title: "Tradition", desc: "Ancestral hammam and herbal steaming practices, respectfully preserved." },
+            { title: "Wellness", desc: "We care for the whole woman — cycle, body, breath and spirit." },
+            { title: "Purity", desc: "Organic Tunisian herbs, zero synthetics, single-use hygiene for every guest." },
           ].map(v => (
             <div key={v.title} className="deco-card text-center">
               <h3 className="font-heading text-xl font-medium mb-3 text-primary tracking-wide">{v.title}</h3>
@@ -59,7 +59,7 @@ const About = () => {
 
       {/* Team */}
       <section className="section-padding bg-background">
-        <SectionHeading title="Our Artisans" subtitle="The talented hands behind your transformation" />
+        <SectionHeading title="Our Practitioners" subtitle="The women guiding your wellness journey" />
         <div ref={teamRef} className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {data.team.map((member, i) => (
             <div
