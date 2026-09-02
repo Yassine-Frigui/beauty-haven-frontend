@@ -94,7 +94,7 @@ const Contact = () => {
             </div>
 
             <div className="bg-muted h-48 flex items-center justify-center border border-border">
-              <p className="text-muted-foreground text-xs tracking-wider">📍 1234 Rose Avenue, Beverly Hills</p>
+              <p className="text-muted-foreground text-xs tracking-wider">📍 Les Berges du Lac, Tunis</p>
             </div>
           </div>
         </div>

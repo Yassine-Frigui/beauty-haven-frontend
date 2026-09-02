@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div className="pt-24">
       <section className="section-padding bg-background">
-        <SectionHeading title="The Menu" subtitle="Our complete collection of artisanal beauty treatments" />
+        <SectionHeading title="Our Rituals" subtitle="Herbal steaming, hammam and womb wellness care in the heart of Tunis" />
 
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-4 mb-14">
@@ -50,7 +50,7 @@ const Services = () => {
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{service.description}</p>
               <div className="flex justify-between items-center border-t border-border pt-3">
                 <span className="text-xs text-muted-foreground tracking-wider">{service.duration}</span>
-                <span className="font-heading text-xl text-primary font-medium">${service.price}</span>
+                <span className="font-heading text-xl text-primary font-medium">{service.price} TND</span>
               </div>
             </div>
           ))}
