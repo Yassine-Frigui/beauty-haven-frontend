@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { path: "/", label: "Home" },
@@ -24,9 +25,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 md:h-22 py-4">
           <Link to="/" className="flex flex-col items-center leading-none">
-            <span className="font-display text-2xl md:text-3xl tracking-[0.2em] text-foreground">LUXE</span>
-            <span className="text-[9px] tracking-[0.5em] uppercase text-primary font-body">Beauty Bar</span>
+            <span className="font-display text-2xl md:text-3xl tracking-[0.2em] text-foreground">ZENSHE</span>
+            <span className="text-[9px] tracking-[0.5em] uppercase text-primary font-body">Spa · Tunisia</span>
           </Link>
+
 
           {/* Desktop */}
           <div className="hidden md:flex items-center gap-10">
