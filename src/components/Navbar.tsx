@@ -51,12 +51,17 @@ const Navbar = () => {
               <User className="w-3.5 h-3.5" />
               {user ? user.name.split(" ")[0] : "Login"}
             </Link>
+            <ThemeToggle />
           </div>
 
           {/* Mobile toggle */}
-          <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            <ThemeToggle />
+            <button onClick={() => setOpen(!open)} className="text-foreground" aria-label="Toggle menu">
+              {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
+
         </div>
       </div>
 
